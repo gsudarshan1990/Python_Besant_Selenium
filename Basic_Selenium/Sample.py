@@ -1,7 +1,7 @@
 from selenium import webdriver
 import time
 
-driver = webdriver.Chrome("E:\SeleniumPrgms\drivers\chromedriver.exe")
+driver = webdriver.Chrome("E:\Python_Besant_Selenium\drivers\chromedriver.exe")
 driver.get("https://freecrm.co.in/")
 driver.maximize_window()
 login_element=driver.find_element_by_xpath("//span[text()='Log In']")

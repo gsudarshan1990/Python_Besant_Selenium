@@ -2,7 +2,7 @@ from selenium import webdriver
 import time
 from selenium.webdriver.support.ui import Select
 
-driver=webdriver.Chrome("E:\SeleniumPrgms\drivers\chromedriver.exe")
+driver=webdriver.Chrome("E:\Python_Besant_Selenium\drivers\chromedriver.exe")
 driver.get("http://demo.automationtesting.in/Register.html")
 driver.maximize_window()
 first_name_element=driver.find_element_by_xpath("//input[@placeholder=\"First Name\"]")
