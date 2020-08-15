@@ -1,4 +1,6 @@
+import os
 import time
+import autoit
 
 from selenium.webdriver.common.keys import Keys
 from selenium import webdriver
@@ -10,8 +12,8 @@ login_element=driver.find_element_by_xpath("//span[text()='Log In']")
 login_element.click()
 email_element=driver.find_element_by_xpath("//input[@name='email']")
 password_element=driver.find_element_by_xpath("//input[@name='password']")
-email_element.send_keys("XXXXXX")
-password_element.send_keys("XXXX")
+email_element.send_keys("vaishu.mru@gmail.com")
+password_element.send_keys("Vaish1234")
 crm_login_element=driver.find_element_by_xpath("//div[text()='Login']")
 crm_login_element.click()
 time.sleep(5)
@@ -21,13 +23,13 @@ new_url_element=driver.find_element_by_xpath("//a[@href=\"/contacts/new\"]")
 new_url_element.click()
 time.sleep(5)
 contact_firstname_element=driver.find_element_by_xpath("//input[@name='first_name']")
-contact_firstname_element.send_keys("Sudar")
+contact_firstname_element.send_keys("Sudarshan")
 contact_lastname_element=driver.find_element_by_xpath("//input[@name='last_name']")
-contact_lastname_element.send_keys("Govind")
+contact_lastname_element.send_keys("Govindarajan")
 contact_middle_name_element=driver.find_element_by_xpath("//input[@name='middle_name']")
 contact_middle_name_element.send_keys("XXX")
 contact_company_name=driver.find_element_by_xpath("//div[@name=\"company\"]//input[@type='text']")
-contact_company_name.send_keys("M")
+contact_company_name.send_keys("Infosys")
 contact_company_name.send_keys(Keys.ENTER)
 
 access_button=driver.find_element_by_xpath("//button[text()='Public']")
@@ -143,6 +145,10 @@ year_element=driver.find_element_by_name("year")
 year_element.send_keys("2020")
 Identifier_element=driver.find_element_by_name("identifier")
 Identifier_element.send_keys("Good Identifer")
-
+file_upload_element=driver.find_element_by_name("image")
+file_upload_element.click()
+autoit.win_active("Open")
+autoit.control_send("Open","Edit1",r"E:\Python_Besant_Selenium\Basic_Selenium\image1.png")
+autoit.control_send("Open","Edit1","{ENTER}")
 save_element=driver.find_element_by_xpath("//i[@class='save icon']")
 save_element.click()
