@@ -1,0 +1,18 @@
+from selenium import webdriver
+
+driver = webdriver.Chrome("E:\chrome driver\chromedriver_win32\chromedriver.exe")
+driver.maximize_window()
+driver.implicitly_wait(10)
+driver.get('https://in.godaddy.com/')
+driver.find_element_by_xpath("(//a[@class='tray-toggle']//..)[4]").click()
+driver.find_element_by_xpath("//a[text()='Sign In']").click()
+driver.find_element_by_id("username").send_keys('XXXXXXXX')
+driver.find_element_by_id('password').send_keys('XXXXXXXX')
+driver.find_element_by_id('submitBtn').click()
+driver.find_element_by_xpath("//button[text()='Start Shopping']").click()
+driver.find_element_by_xpath("//div[contains(@class,'hamburger-menu')]").click()
+driver.find_element_by_xpath('//li[@data-track-name="word_press_link"]').click()
+driver.find_element_by_xpath('(//a[@data-track-name="word_press_hosting_link"])[1]').click()
+driver.find_element_by_xpath("//div[contains(@class,'carousel plans')]//div//div//div//div//div[2]//span//strong[text()='Basic']//..//..//..//..//div//div[5]//button[contains(text(),'Add to Cart')]").click()
+driver.find_element_by_xpath('//div[@data-track-name="account_tray"]//a//span[2]').click()
+driver.find_element_by_xpath('//a[@data-track-name="log_out_link"]').click()
